@@ -1,5 +1,6 @@
 
 import { useState, type FormEvent } from "react";
+import AuthLayout from "./AuthLayout";
 
 type RegisterProps = {
   onLogin: () => void;
@@ -17,7 +18,7 @@ function Register({ onLogin, onRegister }: RegisterProps) {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-100 px-4">
+    <AuthLayout>
       <div className="w-full max-w-md rounded-2xl bg-white p-8 shadow-xl">
 
         <h1 className="mb-2 text-center text-3xl font-bold text-slate-800">
@@ -92,7 +93,7 @@ function Register({ onLogin, onRegister }: RegisterProps) {
         </p>
 
       </div>
-    </div>
+    </AuthLayout>
   );
 }
 

@@ -1,4 +1,7 @@
+
 import React from "react";
+import AuthLayout from "./AuthLayout";
+
 type LoginProps = {
   onRegister: () => void;
   onLogin: (email: string, password: string) => void;
@@ -14,7 +17,7 @@ function Login({ onRegister, onLogin }: LoginProps) {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-100 px-4">
+    <AuthLayout>
       <div className="w-full max-w-md rounded-2xl bg-white p-8 shadow-xl">
 
         <h1 className="mb-2 text-center text-3xl font-bold text-slate-800">
@@ -77,10 +80,8 @@ function Login({ onRegister, onLogin }: LoginProps) {
         </p>
 
       </div>
-    </div>
+    </AuthLayout>
   );
 }
-
-
 
 export default Login;
